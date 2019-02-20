@@ -773,7 +773,7 @@ h6,
 
 p {
     /*font-family: "Open Sans", Helvetica, Arial, sans-serif;*/
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.6;
     margin: 15px 0;
     color: #515157;
@@ -798,7 +798,6 @@ em {
 
 /* LINKS */
 a {
-    color: #1abc9c;
 }
 
 a:hover {
@@ -824,9 +823,7 @@ ul {
 ul li,
 ol li {
     /*font-family: "Open Sans", Helvetica, Arial, sans-serif;*/
-    font-size: 14px;
-    color: #515157;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 ul.circle li:before {
@@ -1677,11 +1674,40 @@ fieldset[disabled] .form-control {
 
 .clear-columns {
     background-color: rgba(0, 0, 0, 0);
-    margin-top: 600px;
+    margin-top: 550px;
 }
 
 .clear-columns2 {
+    margin-top: 65px;
 }
 
 .main-nav {
+}
+
+.bylaw-fix {
+    height: 100px;
+}
+
+.bread-start {
+    color: #EAE151;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.active-bread {
+    font-size: 25px;
+}
+
+.clear-contacts {
+    height: 100px;
+}
+
+.clear-events {
+    height: 100px;
+}
+
+.event {
+    width: 100%;
+    margin-left: 0;
+    height: 100%;
 }

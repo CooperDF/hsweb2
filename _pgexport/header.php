@@ -32,17 +32,20 @@
                                     'class' => 'brand-img img-responsive'
                             ) ) ?> </a>
                     </div>
-                    <div class="clearfix clear-columns2"></div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbar-collapse">
-                        <?php wp_nav_menu( array(
-                                'menu' => 'primary',
-                                'menu_class' => 'nav navbar-nav navbar-left',
-                                'container' => '',
-                                'depth' => '2',
-                                'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
-                                'walker' => new wp_bootstrap_navwalker()
-                        ) ); ?>
+                        <div class="row">
+                            <div class="clearfix clear-columns2">
+                                <?php wp_nav_menu( array(
+                                        'menu' => 'primary',
+                                        'menu_class' => 'nav navbar-nav navbar-left',
+                                        'container' => '',
+                                        'depth' => '2',
+                                        'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+                                        'walker' => new wp_bootstrap_navwalker()
+                                ) ); ?>
+                            </div>
+                        </div>
                     </div>
                     <!-- /.navbar-collapse -->
                 </div>

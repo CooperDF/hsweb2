@@ -112,7 +112,9 @@ function hs_web_2_customize_register( $wp_customize ) {
 
     /* Pinegrow generated Customizer Controls Begin */
 
-    require_once "inc/blocks/wp_blocks_customizer_controls.php";
+    $wp_customize->add_section( 'blocks_map', array(
+        'title' => __( 'Map', 'hs_web_2' )
+    ));
 
     $wp_customize->add_section( 'blocks_copyright_2', array(
         'title' => __( 'Copyright', 'hs_web_2' )
@@ -120,10 +122,6 @@ function hs_web_2_customize_register( $wp_customize ) {
 
     $wp_customize->add_section( 'blocks_footer_1_4', array(
         'title' => __( 'Footer', 'hs_web_2' )
-    ));
-
-    $wp_customize->add_section( 'blocks_map', array(
-        'title' => __( 'Map', 'hs_web_2' )
     ));
 
     $wp_customize->add_section( 'blocks_content_1_4', array(
@@ -146,6 +144,18 @@ function hs_web_2_customize_register( $wp_customize ) {
         'mime_type' => 'image',
         'section' => 'blocks_header_2'
     ) ) );
+
+    $wp_customize->add_setting( 'blocks_copyright_2_text', array(
+        'type' => 'theme_mod',
+        'default' => __( '© COPYRIGHT 2015 - Pinegrow Blocks - ALL RIGHTS RESERVED.', 'hs_web_2' ),
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'blocks_copyright_2_text', array(
+        'label' => __( 'Text', 'hs_web_2' ),
+        'type' => 'textarea',
+        'section' => 'blocks_copyright_2'
+    ));
 
     $wp_customize->add_setting( 'blocks_content_1_4_title', array(
         'type' => 'theme_mod',
@@ -240,18 +250,6 @@ function hs_web_2_customize_register( $wp_customize ) {
             )
     ));
 
-    $wp_customize->add_setting( 'blocks_copyright_2_text', array(
-        'type' => 'theme_mod',
-        'default' => __( '© COPYRIGHT 2015 - Pinegrow Blocks - ALL RIGHTS RESERVED.', 'hs_web_2' ),
-        'sanitize_callback' => $pgwp_sanitize
-    ));
-
-    $wp_customize->add_control( 'blocks_copyright_2_text', array(
-        'label' => __( 'Text', 'hs_web_2' ),
-        'type' => 'textarea',
-        'section' => 'blocks_copyright_2'
-    ));
-
     /* Pinegrow generated Customizer Controls End */
 
 }
@@ -285,6 +283,18 @@ if ( ! function_exists( 'hs_web_2_enqueue_scripts' ) ) :
     wp_deregister_script( 'ieviewportbugworkaround' );
     wp_enqueue_script( 'ieviewportbugworkaround', get_template_directory_uri() . '/assets/js/ie10-viewport-bug-workaround.js', false, null, true);
 
+    wp_deregister_script( 'script-2' );
+    wp_enqueue_script( 'script-2', 'https://maps.google.com/maps/api/js?key=AIzaSyBiXBT6sNomMCSDJ73IG09OyR7A8N8JfAM&sensor=true', false, null, true);
+
+    wp_deregister_script( 'script-3' );
+    wp_enqueue_script( 'script-3', 'https://maps.google.com/maps/api/js?key=AIzaSyBiXBT6sNomMCSDJ73IG09OyR7A8N8JfAM&sensor=true', false, null, true);
+
+    wp_deregister_script( 'script-4' );
+    wp_enqueue_script( 'script-4', 'https://maps.google.com/maps/api/js?key=AIzaSyBiXBT6sNomMCSDJ73IG09OyR7A8N8JfAM&sensor=true', false, null, true);
+
+    wp_deregister_script( 'script-5' );
+    wp_enqueue_script( 'script-5', 'https://maps.google.com/maps/api/js?key=AIzaSyBiXBT6sNomMCSDJ73IG09OyR7A8N8JfAM&sensor=true', false, null, true);
+
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
@@ -316,6 +326,30 @@ if ( ! function_exists( 'hs_web_2_enqueue_scripts' ) ) :
     wp_deregister_style( 'fontawesome' );
     wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', false, null, 'all');
 
+    wp_deregister_style( 'style-3' );
+    wp_enqueue_style( 'style-3', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700', false, null, 'all');
+
+    wp_deregister_style( 'style-4' );
+    wp_enqueue_style( 'style-4', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic', false, null, 'all');
+
+    wp_deregister_style( 'style-5' );
+    wp_enqueue_style( 'style-5', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700', false, null, 'all');
+
+    wp_deregister_style( 'style-6' );
+    wp_enqueue_style( 'style-6', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic', false, null, 'all');
+
+    wp_deregister_style( 'style-7' );
+    wp_enqueue_style( 'style-7', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700', false, null, 'all');
+
+    wp_deregister_style( 'style-8' );
+    wp_enqueue_style( 'style-8', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic', false, null, 'all');
+
+    wp_deregister_style( 'style-9' );
+    wp_enqueue_style( 'style-9', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700', false, null, 'all');
+
+    wp_deregister_style( 'style-10' );
+    wp_enqueue_style( 'style-10', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic', false, null, 'all');
+
     /* Pinegrow generated Enqueue Styles End */
 
     }
@@ -327,7 +361,6 @@ function pgwp_sanitize_placeholder($input) { return $input; }
  * Resource files included by Pinegrow.
  */
 /* Pinegrow generated Include Resources Begin */
-require_once "inc/blocks/wp_blocks.php";
 require_once "inc/bootstrap/wp_bootstrap_navwalker.php";
 
     /* Pinegrow generated Include Resources End */
